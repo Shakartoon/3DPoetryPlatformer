@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerControllerOnGround : MonoBehaviour {
 
 	public float moveSpeed = 3.0f;
-	public float jumpHeight = 2.0f; 
+	public float jumpHeight = 1.0f; 
 
 	public bool grounded = true; 
 	public float jumpPower = 10.0f; 
@@ -24,9 +24,11 @@ public class PlayerControllerOnGround : MonoBehaviour {
 		
 		}
 
-		if (Input.GetKeyDown (KeyCode.Space)) { 
+		if (Input.GetKey (KeyCode.Space)) { 
 
-			transform.Translate (0f, 0f, jumpHeight * Time.deltaTime); 
+			transform.position += (Vector3.up * jumpHeight * Time.deltaTime); 
+
+		//	transform.Translate (0f, 0f, jumpHeight * Time.deltaTime); 
 
 		//	this.gameObject.GetComponent<Rigidbody> ().AddForce (Vector3.up) * jumpPower;  
 		
