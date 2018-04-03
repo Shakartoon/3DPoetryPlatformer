@@ -1,0 +1,22 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement; 
+
+public class LoadSceneScript : MonoBehaviour {
+
+	// Use this for initialization
+	void Start () {
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+
+		if (Input.GetMouseButtonDown (0)) {
+			Debug.Log ("Yay, THIS WORKED!"); 
+			SceneManager.LoadScene ("PLAY_SCENE"); 
+		}
+		
+	}
+}
